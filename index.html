@@ -9,9 +9,74 @@
     <script src="app.js" defer></script>
   </head>
   <body>
+    <div class="body-overlay"></div>
     <header>Library</header>
     <main>
       <div class="books-container"></div>
+      <button type="button" class="modal-btn" data-modal-btn-open="add">
+        Add Book
+      </button>
+      <div class="modal shadow" data-modal="add">
+        <button class="modal-close">x</button>
+        <h2>Add a Book</h2>
+        <form action="" id="book-form">
+          <div class="form-group">
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="form-input"
+              placeholder="Title"
+              required
+            />
+            <label for="title" class="form-label">Title</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="author"
+              id="author"
+              class="form-input"
+              placeholder="Author"
+              required
+            />
+            <label for="author" class="form-label">Author</label>
+          </div>
+          <div class="form-group">
+            <input
+              type="number"
+              name="pages"
+              id="pages"
+              class="form-input"
+              placeholder="Pages"
+              value=""
+              required
+            />
+            <label for="pages" class="form-label">Pages</label>
+          </div>
+          <div class="form-group">
+            <div class="form-checkbox-group">
+              <input
+                type="checkbox"
+                name="read"
+                id="read"
+                class="form-checkbox-input"
+              />
+              <label for="read" class="form-checkbox-label">
+                <span
+                  class="form-checkbox-button"
+                  role="checkbox"
+                  tabindex="0"
+                ></span>
+                I have read this
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="form-submit">Add to Library</button>
+          </div>
+        </form>
+      </div>
     </main>
   </body>
 </html>
