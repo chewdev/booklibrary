@@ -42,9 +42,9 @@ function showBooks() {
     titleP.textContent = book.title;
     titleP.classList.add("card-title");
     const authorP = document.createElement("p");
-    authorP.textContent = book.author;
+    authorP.textContent = "By: " + book.author;
     const pagesP = document.createElement("p");
-    pagesP.textContent = book.pages;
+    pagesP.textContent = "Total pages: " + book.pages;
     const hasBeenReadP = document.createElement("p");
     hasBeenReadP.textContent = book.hasBeenRead
       ? "Has been read"
