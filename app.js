@@ -40,6 +40,7 @@ function showBooks() {
     removeBtn.textContent = "X";
     const titleP = document.createElement("p");
     titleP.textContent = book.title;
+    titleP.classList.add("card-title");
     const authorP = document.createElement("p");
     authorP.textContent = book.author;
     const pagesP = document.createElement("p");
