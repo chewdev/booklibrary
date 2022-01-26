@@ -25,6 +25,10 @@ function removeBookFromLibrary(i) {
   userLibrary.splice(i, 1);
 }
 
+function makeShorterThan50Chars(str) {
+  return str.length > 50 ? str.slice(0, 47) + "..." : str;
+}
+
 function showBooks() {
   booksContainer.innerHTML = "";
   userLibrary.forEach((book, i) => {
@@ -37,13 +41,18 @@ function showBooks() {
       removeBookFromLibrary(Number(e.target.dataset["libraryIndex"]));
       showBooks();
     });
-    removeBtn.textContent = "X";
-    const titleP = document.createElement("p");
-    titleP.textContent = book.title;
-    titleP.classList.add("card-title");
+    removeBtn.textContent = "Remove Book";
+    const titleDiv = document.createElement("div");
+    titleDiv.classList.add("card-title-container");
+    const titleH2 = document.createElement("h2");
+    titleH2.textContent = makeShorterThan50Chars(book.title);
+    titleH2.classList.add("card-title");
+    titleDiv.appendChild(titleH2);
     const authorP = document.createElement("p");
-    authorP.textContent = "By: " + book.author;
+    authorP.classList.add("card-author");
+    authorP.textContent = `By: ${makeShorterThan50Chars(book.author)}`;
     const pagesP = document.createElement("p");
+    pagesP.classList.add("card-pages");
     pagesP.textContent = "Total pages: " + book.pages;
     const hasBeenReadFormGroup = document.createElement("div");
     hasBeenReadFormGroup.classList.add("form-group");
@@ -71,11 +80,12 @@ function showBooks() {
     hasBeenReadCheckboxGroup.appendChild(toggleHasBeenReadCheckbox);
     hasBeenReadCheckboxGroup.appendChild(hasBeenReadLabel);
     hasBeenReadFormGroup.appendChild(hasBeenReadCheckboxGroup);
-    bookDiv.appendChild(removeBtn);
-    bookDiv.appendChild(titleP);
+
+    bookDiv.appendChild(titleDiv);
     bookDiv.appendChild(authorP);
     bookDiv.appendChild(pagesP);
     bookDiv.appendChild(hasBeenReadFormGroup);
+    bookDiv.appendChild(removeBtn);
     booksContainer.appendChild(bookDiv);
   });
 }

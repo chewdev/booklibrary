@@ -179,9 +179,28 @@ body {
   width: 15rem;
   border-radius: 3px;
   display: inline-block;
-  padding: 1rem;
+
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
   margin: 1rem;
+}
+
+.book-card p {
+  margin: 1rem;
+}
+
+.card-title-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(41, 152, 255, 0.85),
+    rgba(86, 67, 250, 0.85)
+  );
+  margin: 0;
+  padding: 0.5rem 0.5rem;
+  height: 80px;
 }
 
 .card-title {
@@ -191,11 +210,33 @@ body {
   text-align: center;
   word-wrap: break-word;
   color: #fff;
-  background-image: linear-gradient(
-    to right bottom,
-    rgba(41, 152, 255, 0.85),
-    rgba(86, 67, 250, 0.85)
-  );
-  margin: 0.5rem auto;
-  padding: 0.3rem 0.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.card-author,
+.card-pages {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.book-card .form-group {
+  margin: 0;
+  margin-top: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.remove-btn {
+  font-size: 0.8rem;
+  display: block;
+  margin: 3rem auto;
+  padding: 0.5rem 1rem;
+  border: 2px solid #ff9292;
+  border-radius: 5px;
+  color: #ff9292;
 }
