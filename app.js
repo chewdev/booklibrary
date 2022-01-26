@@ -45,24 +45,37 @@ function showBooks() {
     authorP.textContent = "By: " + book.author;
     const pagesP = document.createElement("p");
     pagesP.textContent = "Total pages: " + book.pages;
-    const hasBeenReadP = document.createElement("p");
-    hasBeenReadP.textContent = book.hasBeenRead
-      ? "Has been read"
-      : "Still needs to be read";
+    const hasBeenReadFormGroup = document.createElement("div");
+    hasBeenReadFormGroup.classList.add("form-group");
+    const hasBeenReadCheckboxGroup = document.createElement("div");
     const toggleHasBeenReadCheckbox = document.createElement("input");
     toggleHasBeenReadCheckbox.type = "checkbox";
+    toggleHasBeenReadCheckbox.id = "has-been-read-" + i;
+    toggleHasBeenReadCheckbox.name = "has-been-read-" + i;
     toggleHasBeenReadCheckbox.checked = book.hasBeenRead;
+    toggleHasBeenReadCheckbox.classList.add("form-checkbox-input");
     toggleHasBeenReadCheckbox.addEventListener("change", (e) => {
       const ind = i;
       userLibrary[ind].toggleHasBeenRead();
       showBooks();
     });
+    const hasBeenReadLabel = document.createElement("label");
+    hasBeenReadLabel.htmlFor = "has-been-read-" + i;
+    hasBeenReadLabel.classList.add("form-checkbox-label");
+    const hasBeenReadLabelSpan = document.createElement("span");
+    hasBeenReadLabelSpan.classList.add("form-checkbox-button");
+    hasBeenReadLabelSpan.ariaRoleDescription = "checkbox";
+    hasBeenReadLabel.appendChild(hasBeenReadLabelSpan);
+    const text = book.hasBeenRead ? "Has been read" : "Still needs to be read";
+    hasBeenReadLabel.innerHTML += text;
+    hasBeenReadCheckboxGroup.appendChild(toggleHasBeenReadCheckbox);
+    hasBeenReadCheckboxGroup.appendChild(hasBeenReadLabel);
+    hasBeenReadFormGroup.appendChild(hasBeenReadCheckboxGroup);
     bookDiv.appendChild(removeBtn);
     bookDiv.appendChild(titleP);
     bookDiv.appendChild(authorP);
     bookDiv.appendChild(pagesP);
-    bookDiv.appendChild(toggleHasBeenReadCheckbox);
-    bookDiv.appendChild(hasBeenReadP);
+    bookDiv.appendChild(hasBeenReadFormGroup);
     booksContainer.appendChild(bookDiv);
   });
 }
