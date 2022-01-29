@@ -192,10 +192,10 @@ h1 {
   background-color: #fff;
   height: 20rem;
   width: 15rem;
-  border-radius: 3px;
+  border-radius: 5px;
   display: inline-block;
 
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
   margin: 1rem;
 }
 
@@ -216,6 +216,7 @@ h1 {
   margin: 0;
   padding: 0.5rem 0.5rem;
   height: 80px;
+  border-radius: 5px 5px 0 0;
 }
 
 .card-title {
