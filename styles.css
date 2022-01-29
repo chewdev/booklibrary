@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -48,16 +49,33 @@ h1 {
 
 .modal h2 {
   text-align: center;
+  color: blue;
+  margin-top: 0;
 }
 
 .modal-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   font-size: 24px;
-  background-color: white;
+  background-color: rgba(240, 240, 240, 0.5);
   color: #ff9292;
   border: 2px solid #ff9292;
+  transition: transform 0.3s linear;
+  cursor: pointer;
+}
+.modal-close span {
+  font-size: 16px;
+}
+
+.modal-close:hover {
+  transform: scale(1.2);
 }
 
 .is-visible {
@@ -76,7 +94,7 @@ h1 {
 .form-input {
   font-size: 1rem;
   font-family: inherit;
-  padding: 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 2px;
   background-color: rgba(240, 240, 240, 0.5);
   border: none;
@@ -94,7 +112,7 @@ h1 {
 }
 
 .form-input:focus:invalid {
-  border-bottom: 3px solid darkblue;
+  border-bottom: 3px solid #ff9292;
 }
 
 .form-input::-webkit-input-placeholder {
@@ -125,6 +143,10 @@ h1 {
   margin: 0 auto;
 }
 
+.form-group.no-margin-bottom {
+  margin-bottom: 0;
+}
+
 .form-checkbox-input {
   display: none;
 }
@@ -144,7 +166,7 @@ h1 {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: -0.2rem;
+  top: -0.1rem;
 }
 
 .form-checkbox-button::after {
@@ -171,15 +193,19 @@ h1 {
 .form-submit {
   display: block;
   margin: 0 auto;
-  padding: 1rem 2rem;
-  border: 1px solid blue;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid blue;
   color: blue;
   border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s linear;
 }
 
-.form-submit:hover {
+.form-submit:hover,
+.form-submit:focus-visible {
   background-color: blue;
   color: white;
+  outline: none;
 }
 
 .books-container {
