@@ -215,6 +215,7 @@ h1 {
 }
 
 .book-card {
+  position: relative;
   background-color: #fff;
   height: 20rem;
   width: 15rem;
@@ -246,7 +247,7 @@ h1 {
 }
 
 .card-title {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -255,6 +256,11 @@ h1 {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.card-author {
+  height: 66px;
+  overflow: hidden;
 }
 
 .card-author,
@@ -275,10 +281,12 @@ h1 {
 
 .remove-btn {
   font-size: 0.8rem;
-  display: block;
-  margin: 3rem auto;
   padding: 0.5rem 1rem;
   border: 2px solid #ff9292;
   border-radius: 5px;
   color: #ff9292;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
