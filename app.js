@@ -1,4 +1,5 @@
-const userLibrary = [];
+const userLibrary =
+  JSON.parse(window.localStorage.getItem("userLibrary")) || [];
 const booksContainer = document.querySelector(".books-container");
 function Book(title, author, pages, hasBeenRead = false) {
   this.title = title;
