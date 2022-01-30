@@ -216,11 +216,15 @@ h1 {
   transition: all 0.3s linear;
 }
 
-.form-submit:hover,
 .form-submit:focus-visible {
   background-color: blue;
   color: white;
   outline: none;
+}
+
+.form-submit:hover {
+  background-color: blue;
+  color: white;
 }
 
 .books-container {
