@@ -77,8 +77,8 @@ h1 {
 
 .modal-close {
   position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
+  top: 14px;
+  right: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,6 +91,7 @@ h1 {
   border: 2px solid #ff9292;
   transition: transform 0.3s linear;
   cursor: pointer;
+  padding: 0;
 }
 .modal-close span {
   font-size: 16px;
@@ -329,4 +330,10 @@ h1 {
 .remove-btn:hover {
   background-color: #ff9292;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 36px;
+  }
 }
