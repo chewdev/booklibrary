@@ -19,6 +19,14 @@ h1 {
   border: 2px solid rgba(86, 67, 250);
   border-radius: 10px;
   padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.modal-btn:hover,
+.modal-btn:focus-visible {
+  background-color: rgba(86, 67, 250, 0.85);
+  outline: none;
 }
 
 .body-overlay {
@@ -289,4 +297,13 @@ h1 {
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.remove-btn:hover,
+.remove-btn:focus-visible {
+  background-color: #ff9292;
+  color: #ffffff;
+  outline: none;
 }
