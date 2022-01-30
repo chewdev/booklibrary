@@ -7,6 +7,10 @@ body {
   background-color: #dfdfdf;
 }
 
+button {
+  background-color: #ffffff;
+}
+
 h1 {
   text-align: center;
 }
@@ -23,10 +27,13 @@ h1 {
   transition: all 0.3s linear;
 }
 
-.modal-btn:hover,
 .modal-btn:focus-visible {
-  background-color: rgba(86, 67, 250, 0.85);
   outline: none;
+  background-color: rgba(86, 67, 250, 0.85);
+}
+
+.modal-btn:hover {
+  background-color: rgba(86, 67, 250, 0.85);
 }
 
 .body-overlay {
@@ -301,9 +308,13 @@ h1 {
   transition: all 0.3s linear;
 }
 
-.remove-btn:hover,
 .remove-btn:focus-visible {
+  outline: none;
   background-color: #ff9292;
   color: #ffffff;
-  outline: none;
+}
+
+.remove-btn:hover {
+  background-color: #ff9292;
+  color: #ffffff;
 }

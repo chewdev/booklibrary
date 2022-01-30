@@ -22,12 +22,17 @@
     <div class="body-overlay"></div>
     <h1>My Library Of Books</h1>
     <main>
-      <button type="button" class="modal-btn" data-modal-btn-open="add">
+      <button
+        type="button"
+        tabindex="0"
+        class="modal-btn"
+        data-modal-btn-open="add"
+      >
         Add Book
       </button>
       <div class="books-container"></div>
       <div class="modal shadow" data-modal="add">
-        <button class="modal-close">
+        <button tabindex="0" class="modal-close">
           <span class="material-icons"> close </span>
         </button>
         <h2>Add a Book</h2>
@@ -87,7 +92,9 @@
             </div>
           </div>
           <div class="form-group no-margin-bottom">
-            <button type="submit" class="form-submit">Add to Library</button>
+            <button type="submit" tabindex="0" class="form-submit">
+              Add to Library
+            </button>
           </div>
         </form>
       </div>
