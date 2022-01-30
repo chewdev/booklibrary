@@ -1,5 +1,41 @@
-const userLibrary =
-  JSON.parse(window.localStorage.getItem("userLibrary")) || [];
+function existsStrWithLength(str) {
+  return str && typeof str === "string" && !!str.length;
+}
+
+function existsNumWithVal(num) {
+  return num && typeof num === "number" && num > 0;
+}
+
+function setInitialLibrary() {
+  let localLibrary = JSON.parse(window.localStorage.getItem("userLibrary"));
+  if (localLibrary && localLibrary.length) {
+    localLibrary = localLibrary
+      .filter(
+        (book) =>
+          existsStrWithLength(book.title) &&
+          existsStrWithLength(book.author) &&
+          existsNumWithVal(Number(book.pages)) &&
+          typeof book.hasBeenRead === "boolean"
+      )
+      .map((book) => {
+        return new Book(book.title, book.author, book.pages, book.hasBeenRead);
+      });
+
+    return localLibrary;
+  } else {
+    return [];
+  }
+}
+
+const userLibrary = setInitialLibrary();
+
+function saveLibraryLocal() {
+  window.localStorage.setItem("userLibrary", JSON.stringify(userLibrary));
+  return null;
+}
+
+window.onbeforeunload = saveLibraryLocal;
+
 const booksContainer = document.querySelector(".books-container");
 function Book(title, author, pages, hasBeenRead = false) {
   this.title = title;
@@ -139,3 +175,5 @@ formCheckboxButton.addEventListener("keypress", (e) => {
     e.target.click();
   }
 });
+
+showBooks();
