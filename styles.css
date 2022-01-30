@@ -13,6 +13,10 @@ button {
 
 h1 {
   text-align: center;
+  color: rgba(41, 152, 255);
+  font-size: 48px;
+  font-weight: 400;
+  margin: 16px;
 }
 
 .modal-btn {
@@ -20,6 +24,7 @@ h1 {
   margin: 0 auto;
   display: block;
   color: rgba(41, 152, 255);
+  color: rgba(86, 67, 250);
   border: 2px solid rgba(86, 67, 250);
   border-radius: 10px;
   padding: 0.5rem 1rem;
@@ -30,10 +35,12 @@ h1 {
 .modal-btn:focus-visible {
   outline: none;
   background-color: rgba(86, 67, 250, 0.85);
+  color: #ffffff;
 }
 
 .modal-btn:hover {
   background-color: rgba(86, 67, 250, 0.85);
+  color: #ffffff;
 }
 
 .body-overlay {
