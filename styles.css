@@ -71,7 +71,7 @@ h1 {
 
 .modal h2 {
   text-align: center;
-  color: blue;
+  color: rgba(41, 152, 255);
   margin-top: 0;
 }
 
@@ -131,7 +131,7 @@ h1 {
 .form-input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(15, 15, 15, 0.1);
-  border-bottom: 3px solid blue;
+  border-bottom: 3px solid rgba(41, 152, 255);
 }
 
 .form-input:focus:invalid {
@@ -184,7 +184,7 @@ h1 {
 .form-checkbox-button {
   height: 1.5rem;
   width: 1.5rem;
-  border: 4px solid blue;
+  border: 4px solid rgba(41, 152, 255);
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -202,7 +202,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: blue;
+  background-color: rgba(41, 152, 255);
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -217,21 +217,21 @@ h1 {
   display: block;
   margin: 0 auto;
   padding: 0.8rem 1.6rem;
-  border: 2px solid blue;
-  color: blue;
+  border: 2px solid rgba(86, 67, 250);
+  color: rgba(86, 67, 250);
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.3s linear;
 }
 
 .form-submit:focus-visible {
-  background-color: blue;
+  background-color: rgba(86, 67, 250);
   color: white;
   outline: none;
 }
 
 .form-submit:hover {
-  background-color: blue;
+  background-color: rgba(86, 67, 250);
   color: white;
 }
 
