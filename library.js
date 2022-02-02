@@ -49,7 +49,6 @@ export function getUserLibrary() {
 }
 
 function saveLibrary() {
-  debugger;
   const userLibraryJSON = JSON.stringify(getUserLibrary());
   if (isAuthed()) {
     writeUserLibrary(auth.currentUser.uid, userLibraryJSON);
