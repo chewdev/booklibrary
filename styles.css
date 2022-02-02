@@ -19,7 +19,8 @@ h1 {
   margin: 16px;
 }
 
-.modal-btn {
+.modal-btn,
+.sign-in-out {
   font-size: 1.3rem;
   margin: 0 auto;
   display: block;
@@ -30,6 +31,24 @@ h1 {
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: all 0.3s linear;
+}
+
+.sign-in-out {
+  font-size: 1rem;
+  margin-right: 0;
+  color: rgba(41, 152, 255);
+  border-color: rgba(41, 152, 255);
+}
+
+.sign-in-out:focus-visible {
+  outline: none;
+  background-color: rgba(41, 152, 255);
+  color: #ffffff;
+}
+
+.sign-in-out:hover {
+  background-color: rgba(41, 152, 255);
+  color: #ffffff;
 }
 
 .modal-btn:focus-visible {
